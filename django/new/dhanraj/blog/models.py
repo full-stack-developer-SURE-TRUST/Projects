@@ -8,6 +8,7 @@ class Post(models.Model):
     title = models.CharField(max_length=300) 
     subtitle = models.CharField(max_length=500,default=" ")
     content = models.TextField(default=" ")
+    timestamp = models.ImageField(default='default.jpg',height_field=None, width_field=None, upload_to='static')
 
     def __str__(self):
         return self.title 
